@@ -12,7 +12,7 @@
 }
 
 /* =====================================================
-   ORIGINAL HERO SECTION STYLES (UNCHANGED)
+   ORIGINAL HERO SECTION STYLES
    ===================================================== */
 body {
     background: #000;
@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    height: 300vh;
+    height: 500vh; /* Extended: 3 hero pages (300vh) + 2 orbital sections (200vh) */
 }
 
 /* Fixed Stage */
@@ -154,7 +154,7 @@ main {
 }
 
 /* =====================================================
-   NEW MENU OVERLAY - ARAMCO STYLE
+   MENU OVERLAY - ARAMCO STYLE
    ===================================================== */
 .menu-overlay {
     position: fixed;
@@ -328,10 +328,9 @@ main {
 }
 
 /* =====================================================
-   NEW SECTIONS - ARAMCO STYLE
+   NEW SECTIONS - COMMON STYLES
    ===================================================== */
 
-/* Common Section Styles */
 .white-section {
     background: var(--white);
     padding: 120px 0;
@@ -344,6 +343,15 @@ main {
     padding: 120px 0;
     position: relative;
     z-index: 100;
+}
+
+/* ORBITAL SECTIONS - TRANSPARENT BACKGROUND */
+.orbital-section {
+    background: transparent !important;
+    padding: 120px 0;
+    position: relative;
+    z-index: 100;
+    min-height: 100vh;
 }
 
 .section-container {
@@ -378,7 +386,9 @@ main {
     color: var(--text-secondary);
 }
 
-/* SECTION 1: PARTNERSHIP */
+/* =====================================================
+   SECTION 1: PARTNERSHIP
+   ===================================================== */
 .section-partnership {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
@@ -444,7 +454,9 @@ main {
     margin: 0;
 }
 
-/* SECTION 2: INNOVATION SHOWCASE */
+/* =====================================================
+   SECTION 2: INNOVATION SHOWCASE
+   ===================================================== */
 .section-innovation {
     background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
 }
@@ -563,92 +575,20 @@ main {
     font-style: italic;
 }
 
-/* SECTION 3: PROCESS FLOW */
-.section-process {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+/* =====================================================
+   SECTION 3: STATS & IMPACT (ORBITAL BG)
+   ===================================================== */
+.section-impact.orbital-section .section-title,
+.section-impact.orbital-section h2,
+.section-impact.orbital-section h3 {
+    color: var(--white) !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 
-.process-flow-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 60px 0;
-}
-
-.process-step {
-    flex: 1;
-    text-align: center;
-    padding: 40px 32px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s;
-}
-
-.process-step:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0, 169, 247, 0.15);
-}
-
-.step-number {
-    font-size: 64px;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--primary-blue) 0%, #0088cc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 24px;
-}
-
-.step-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: var(--text-primary);
-}
-
-.step-description {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-secondary);
-}
-
-.process-arrow {
-    flex-shrink: 0;
-    margin: 0 24px;
-    color: #cccccc;
-}
-
-.process-statement {
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto;
-    color: var(--text-secondary);
-}
-
-.partner-logos {
-    display: flex;
-    gap: 48px;
-    justify-content: center;
-    align-items: center;
-}
-
-.partner-logo {
-    height: 48px;
-    width: auto;
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: all 0.3s;
-}
-
-.partner-logo:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-/* SECTION 4: STATS & IMPACT */
-.section-impact {
-    background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+.section-impact.orbital-section .section-description,
+.section-impact.orbital-section p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .stats-grid {
@@ -659,7 +599,7 @@ main {
 
 .stat-item {
     padding: 32px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .stat-number {
@@ -668,18 +608,19 @@ main {
     color: var(--primary-blue);
     margin-bottom: 12px;
     line-height: 1;
+    text-shadow: 0 4px 30px rgba(0, 169, 247, 0.8);
 }
 
 .stat-label {
     font-size: 18px;
     font-weight: 600;
-    color: #cccccc;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 12px;
 }
 
 .stat-description {
     font-size: 15px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
 
@@ -688,12 +629,24 @@ main {
     height: 800px;
     object-fit: cover;
     border-radius: 16px;
-    box-shadow: 0 30px 80px rgba(0, 169, 247, 0.2);
+    box-shadow: 0 30px 80px rgba(0, 169, 247, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* SECTION 5: GALLERY */
-.section-gallery {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+/* =====================================================
+   SECTION 4: GALLERY (ORBITAL BG)
+   ===================================================== */
+.section-gallery.orbital-section .section-title,
+.section-gallery.orbital-section h2,
+.section-gallery.orbital-section h3 {
+    color: var(--white) !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.section-gallery.orbital-section .section-subtitle,
+.section-gallery.orbital-section p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .gallery-img {
@@ -701,7 +654,8 @@ main {
     height: 450px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 169, 247, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s;
 }
 
@@ -710,10 +664,12 @@ main {
 }
 
 .milestone-card {
-    background: white;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
     padding: 60px;
     border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 900px;
     margin: 0 auto;
 }
@@ -722,13 +678,13 @@ main {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 24px;
-    color: var(--text-primary);
+    color: var(--white) !important;
 }
 
 .milestone-description {
     font-size: 18px;
     line-height: 1.7;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85) !important;
     margin-bottom: 32px;
 }
 
@@ -740,7 +696,7 @@ main {
 .milestone-list li {
     font-size: 16px;
     line-height: 1.8;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8) !important;
     padding-left: 32px;
     position: relative;
     margin-bottom: 16px;
@@ -754,7 +710,9 @@ main {
     font-weight: 700;
 }
 
-/* SECTION 6: CTA */
+/* =====================================================
+   SECTION 5: CTA
+   ===================================================== */
 .section-cta {
     background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
 }
@@ -790,7 +748,9 @@ main {
     object-fit: cover;
 }
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 .footer-section {
     background: #000;
     padding: 60px 0;
@@ -854,16 +814,6 @@ main {
         font-size: 48px;
     }
 
-    .process-flow-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .process-arrow {
-        transform: rotate(90deg);
-        margin: 0;
-    }
-
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -888,7 +838,8 @@ main {
 
 @media (max-width: 768px) {
     .white-section,
-    .dark-section {
+    .dark-section,
+    .orbital-section {
         padding: 80px 0;
     }
 
@@ -922,11 +873,6 @@ main {
     .footer-nav {
         flex-direction: column;
         gap: 16px;
-    }
-
-    .partner-logos {
-        flex-wrap: wrap;
-        gap: 24px;
     }
 
     .carousel-main-img {
