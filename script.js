@@ -40,26 +40,26 @@ mainTimeline.to(".world-map", {
 }, "p3")
 .to({}, { duration: 0.5 }); // Stay/Pause on Page 3
 
-// PHASE 3: Page 3 to Page 4 (Diagonal Orbit Down-Right)
-mainTimeline.to(".world-map", { 
-    x: "30vw", 
-    y: "-180vh", 
-    rotation: -5, 
-    scale: 1.2, 
-    duration: 1,
-    ease: "power2.inOut"
-}, "p4")
-.to({}, { duration: 0.5 }); // Stay/Pause on Page 4
+// // PHASE 3: Page 3 to Page 4 (Diagonal Orbit Down-Right)
+// mainTimeline.to(".world-map", { 
+//     x: "30vw", 
+//     y: "-180vh", 
+//     rotation: -5, 
+//     scale: 1.2, 
+//     duration: 1,
+//     ease: "power2.inOut"
+// }, "p4")
+// .to({}, { duration: 0.5 }); // Stay/Pause on Page 4
 
 // PHASE 4: Page 4 to Page 5 (Final Center & Deep Zoom)
-mainTimeline.to(".world-map", { 
-    x: "0vw", 
-    y: "-230vh", 
-    rotation: 0, 
-    scale: 1, 
-    duration: 1,
-    ease: "power2.inOut"
-}, "p5");
+// mainTimeline.to(".world-map", { 
+//     x: "0vw", 
+//     y: "-230vh", 
+//     rotation: 0, 
+//     scale: 1, 
+//     duration: 1,
+//     ease: "power2.inOut"
+// }, "p5");
 
 // --- BACKGROUND PARALLAX (Global) ---
 mainTimeline.to(".world-video", {

@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnoSofts | 3D Immersive World</title>
+    <title>TechnoSofts | Engineering The Future</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- MENU OVERLAY - Aramco Style -->
     <div class="menu-overlay">
-        <div class="menu-close">&times;</div>
-        <nav class="menu-content">
-            <ul class="list-unstyled">
-                <li><a href="#" class="menu-link" data-text="HOME">HOME</a></li>
-                <li><a href="#" class="menu-link" data-text="SERVICES">SERVICES</a></li>
-                <li><a href="#" class="menu-link" data-text="PORTFOLIO">PORTFOLIO</a></li>
-                <li><a href="#" class="menu-link" data-text="CONTACT">CONTACT</a></li>
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <div class="menu-header-top">
+                <div class="logo-menu">TECHNOSOFTS</div>
+                <div class="menu-close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="menu-content">
+                <ul class="menu-list">
+                    <li><a href="#home" class="menu-link">Home</a></li>
+                    <li><a href="#partnership" class="menu-link">About</a></li>
+                    <li><a href="#innovation" class="menu-link">Services</a></li>
+                    <li><a href="#gallery" class="menu-link">Gallery</a></li>
+                    <li><a href="#impact" class="menu-link">Impact</a></li>
+                    <li><a href="#contact" class="menu-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-footer">
+                <div class="menu-contact-row">
+                    <div class="contact-block">
+                        <p class="contact-label">Location</p>
+                        <p class="contact-value">Sialkot, Pakistan</p>
+                    </div>
+                    <div class="contact-block">
+                        <p class="contact-label">Email</p>
+                        <p class="contact-value">info@technosofts.net</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- HEADER -->
     <header class="fixed-top px-4 py-4 d-flex justify-content-between align-items-center">
         <div class="logo fw-bold text-white fs-4">TECHNOSOFTS</div>
-        <div class="menu-icon"><span></span><span></span><span></span></div>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
+    <!-- HERO SECTION WITH 3D WORLD (UNCHANGED) -->
     <div class="world-container">
         <div class="world-map">
             <div class="map-bg">
@@ -43,6 +73,7 @@
         </div>
     </div>
 
+    <!-- HERO TEXT SECTIONS (UNCHANGED) -->
     <main>
         <section class="scroll-section">
             <div class="content-box">
@@ -64,23 +95,256 @@
                 <p class="lead text-white-50">Connecting Dubai, KSA, and Germany.</p>
             </div>
         </section>
-
-        
-        <section class="scroll-section">
-            <div class="content-box right-side">
-                <h2 class="display-4 fw-bold uppercase text-white">Future Ready</h2>
-                <p class="lead text-white-50">Web3 and AI Integration.</p>
-            </div>
-        </section>
-
-        <section class="scroll-section">
-            <div class="content-box">
-                <h2 class="display-4 fw-bold uppercase text-white">Join the Hub</h2>
-                <p class="lead text-white-50">Sialkot's tech revolution starts here.</p>
-            </div>
-        </section>
-    
     </main>
+
+    <!-- NEW SECTIONS START HERE - ARAMCO STYLE -->
+    
+    <!-- SECTION 1: PARTNERSHIP (Two Column) -->
+    <section id="partnership" class="white-section section-partnership">
+        <div class="section-container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">A Strategic Partnership</h2>
+                    <p class="section-description">TechnoSofts has enjoyed a thriving relationship with businesses across Pakistan and globally for years. Now we're partnering to push the limits of possibility in technology and innovation.</p>
+                    
+                    <div class="feature-grid mt-5">
+                        <div class="feature-item">
+                            <div class="feature-icon">🚀</div>
+                            <div class="feature-text">
+                                <h4>Injecting New Energy</h4>
+                                <p>Into Pakistan's tech community through innovative solutions</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🤝</div>
+                            <div class="feature-text">
+                                <h4>Strategic Partnerships</h4>
+                                <p>Long-standing presence in Sialkot with global reach</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h4>Innovation Leadership</h4>
+                                <p>Highlighting our commitment to community engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="image-grid-double">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" alt="Team Collaboration" class="grid-img img-1">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop" alt="Innovation" class="grid-img img-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INNOVATION SHOWCASE -->
+    <section id="innovation" class="dark-section section-innovation">
+        <div class="section-container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Building Solutions with Innovative Technology</h2>
+                <p class="section-subtitle text-white-50">This initiative aims to showcase the increasingly important role that advanced technology can play in digital transformation, whilst supporting our objective to empower communities and businesses through technology.</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-12">
+                    <p class="location-text text-center text-white-50 mb-4">
+                        <span class="location-icon">📍</span> First deployed in Sialkot, Pakistan's technology hub
+                    </p>
+                </div>
+            </div>
+
+            <!-- Image Carousel Style -->
+            <div class="image-carousel-container">
+                <div class="main-carousel-image">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1400&h=800&fit=crop" alt="Office Space" class="carousel-main-img" id="mainCarouselImg">
+                    <button class="carousel-nav-btn prev-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-nav-btn next-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="see-video-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        See Video
+                    </div>
+                </div>
+                <div class="carousel-thumbnails">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop" class="thumbnail-img active" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" class="thumbnail-img" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop" class="thumbnail-img" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop" class="thumbnail-img" data-index="3">
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="carousel-caption text-white-50">Innovation at the service of technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PROCESS FLOW -->
+    <section id="process" class="white-section section-process">
+        <div class="section-container">
+            <h2 class="section-title text-center mb-5">Advanced Technology for Modern Business</h2>
+            
+            <div class="process-flow-container">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discovery & Planning</h3>
+                    <p class="step-description">We analyze your business needs and create a customized technology strategy</p>
+                </div>
+                
+                <div class="process-arrow">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Development & Innovation</h3>
+                    <p class="step-description">Our expert team builds cutting-edge solutions using advanced technologies</p>
+                </div>
+                
+                <div class="process-arrow">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Deployment & Growth</h3>
+                    <p class="step-description">We launch your solution and provide ongoing support for continuous improvement</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4">
+                <p class="process-statement">TechnoSofts is investing to be one of Pakistan's leading providers of technology solutions that support economic and social progress – in Sialkot and around the globe.</p>
+                <div class="partner-logos mt-5">
+                    <img src="https://via.placeholder.com/150x50/00A9F7/ffffff?text=Partner+1" alt="Partner 1" class="partner-logo">
+                    <img src="https://via.placeholder.com/150x50/00A9F7/ffffff?text=Partner+2" alt="Partner 2" class="partner-logo">
+                    <img src="https://via.placeholder.com/150x50/00A9F7/ffffff?text=Partner+3" alt="Partner 3" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: STATS & IMPACT -->
+    <section id="impact" class="dark-section section-impact">
+        <div class="section-container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title text-white mb-4">Performance That Powers Success</h2>
+                    <p class="section-description text-white-50 mb-5">Our solutions offer excellent performance, optimal reliability, and high quality – making them ideal for both professional and enterprise applications.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                            <p class="stat-description">Successfully completed projects across various industries</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                            <p class="stat-description">Consistently high ratings from our valued clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                            <p class="stat-description">Delivering excellence in software development</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Team Members</div>
+                            <p class="stat-description">Expert developers and designers at your service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=1000&fit=crop" alt="Team Success" class="impact-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: GALLERY SHOWCASE -->
+    <section id="gallery" class="white-section section-gallery">
+        <div class="section-container">
+            <h2 class="section-title text-center mb-3">First in Sialkot, Then Beyond</h2>
+            <p class="section-subtitle text-center mb-5">In order to drive this vision forward, TechnoSofts will continue working with partners to achieve the ambition of building technology solutions across the country.</p>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" alt="Office Environment" class="gallery-img">
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop" alt="Team Meeting" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="milestone-card">
+                <h3 class="milestone-title">TechnoSofts Hub in Sialkot</h3>
+                <p class="milestone-description">We have partnered with local businesses and educational institutions to promote technology education and youth empowerment across Pakistan.</p>
+                <ul class="milestone-list">
+                    <li>Delivering innovative technology solutions to businesses nationwide</li>
+                    <li>Training and mentoring the next generation of developers</li>
+                    <li>Supporting communities and young people to follow their dreams through technology</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FINAL CTA -->
+    <section class="dark-section section-cta">
+        <div class="section-container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="cta-content">
+                        <h2 class="section-title text-white mb-4">Another Major Milestone for TechnoSofts</h2>
+                        <p class="section-description text-white-50 mb-4">Opening up new possibilities for our partnerships, we aim to continue to work together to promote technology and support businesses in their digital transformation journey.</p>
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cta-image-grid">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Technology" class="cta-grid-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section">
+        <div class="section-container">
+            <div class="footer-content">
+                <div class="footer-logo">TECHNOSOFTS</div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#partnership">About</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-social">
+                    <p class="footer-tagline">Engineering The Future</p>
+                    <p class="footer-scroll-text">Scroll to explore</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
