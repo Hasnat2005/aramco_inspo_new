@@ -1,0 +1,143 @@
+:root { --primary-blue: #00A9F7; }
+body { background: #000; color: white; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+
+main {
+    height: 500vh; /* Giving it 100vh of "extra air" makes everything smoother */
+}
+/* Fixed Stage */
+.world-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    z-index: -1;
+    background-color: #000;
+}
+
+/* The horizontal moving world */
+/* .world-map {
+    position: absolute;
+    width: 270vw; 
+    height: 100vh;
+    left: 0; top: 0;
+} */
+
+
+
+.world-map {
+    position: absolute;
+    width: 240vw; /* Increased width to handle right-side movement */
+    height: 270vh;
+    /* Start the map centered so we can move both left and right */
+    left: -100vw; 
+    top: 0;
+    will-change: transform;
+}
+
+.world-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    /* Zoomed in so we have "padding" for the circular move */
+    transform: scale(1.5); 
+}
+
+.map-bg {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+
+/* .world-video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    transform: scale(1.1); 
+} */
+
+.video-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.9) 100%);
+}
+
+/* Floating Video Containers */
+.video-object {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35vw; height: 24vw;
+    /* border-radius: 24px; */
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.vid-1 { left: 60vw; 
+margin-top: -350px;
+margin-left: 70px;} /* Appears on Section 2 */
+.vid-2 { 
+    /* Moves it toward the far right edge of your 230vw map */
+    left: 175vw; 
+    
+    /* Moves it significantly downwards from the center */
+    margin-top: -430px; 
+    
+    /* Optional: If you want it even further right, 
+       you can add a margin-left too */
+    margin-left: 2060px; 
+} /* Appears on Section 3 */
+
+.video-object video { width: 100%; height: 100%; object-fit: cover; }
+
+/* Scroll Settings */
+.scroll-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+    z-index: 10;
+}
+
+.content-box {
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.right-side { margin-left: auto; }
+.outline-text { -webkit-text-stroke: 1px white; color: transparent; }
+.uppercase { text-transform: uppercase; }
+
+/* Menu Icon Bars */
+.menu-icon {
+    width: 30px; height: 20px;
+    cursor: pointer;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2000;
+}
+.menu-icon span {
+    display: block; width: 100%; height: 2px;
+    background: white; transition: 0.3s;
+}
+
+/* Fullscreen Overlay */
+.menu-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1500;
+    display: flex; align-items: center; justify-content: center;
+    visibility: hidden; opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-overlay.active { visibility: visible; opacity: 1; }
+
+.menu-link {
+    font-size: 5rem; font-family: 'Montserrat', sans-serif;
+    color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    text-decoration: none; transition: 0.4s; display: block;
+}
+.menu-link:hover { color: white; -webkit-text-stroke: 0px; transform: scale(1.1); }
