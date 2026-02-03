@@ -42,32 +42,11 @@ mainTimeline.to(".world-map", {
 }, "p3")
 .to({}, { duration: 0.5 }); // Pause on Page 3
 
-// --- PHASE 3: Section 3 Stats & Impact (ORBITAL BG) ---
-mainTimeline.to(".world-map", {
-    x: "-80vw",
-    y: "-180vh",
-    rotation: -15,
-    scale: 1.15,
-    duration: 1,
-    ease: "power2.inOut"
-}, "p4")
-.to({}, { duration: 0.5 }); // Pause
-
-// --- PHASE 4: Section 4 Gallery (ORBITAL BG) ---
-mainTimeline.to(".world-map", {
-    x: "60vw",
-    y: "-250vh",
-    rotation: 18,
-    scale: 0.9,
-    duration: 1,
-    ease: "power2.inOut"
-}, "p5");
-
 // --- BACKGROUND PARALLAX (Global) ---
 mainTimeline.to(".world-video", {
-    scale: 2.0,
-    x: "40vw",
-    y: "25vh",
+    scale: 1.8,
+    x: "30vw",
+    y: "20vh",
     ease: "none"
 }, 0);
 
@@ -392,6 +371,124 @@ gsap.utils.toArray('.impact-image, .cta-grid-img').forEach((img) => {
         }
     });
 });
+
+/* =====================================================
+   VIDEO VISIBILITY CONTROL
+   ===================================================== */
+// Hide videos when scrolled past hero section
+function handleVideoVisibility() {
+    const vid1 = document.querySelector('.vid-1');
+    const vid2 = document.querySelector('.vid-2');
+    
+    if (!vid1 || !vid2) return;
+    
+    window.addEventListener('scroll', () => {
+        const scrollProgress = window.pageYOffset / window.innerHeight;
+        
+        // Hide videos after hero section (after 3 pages = 3.0vh)
+        if (scrollProgress > 3.0) {
+            vid1.classList.add('hide-after-hero');
+            vid2.classList.add('hide-after-hero');
+        } else {
+            vid1.classList.remove('hide-after-hero');
+            vid2.classList.remove('hide-after-hero');
+        }
+    });
+}
+
+// Initialize on load
+handleVideoVisibility();
+
+/* =====================================================
+   MOBILE VIDEO VISIBILITY CONTROL
+   ===================================================== */
+function handleMobileVideos() {
+    if (window.innerWidth <= 768) {
+        const vid1 = document.querySelector('.vid-1');
+        const vid2 = document.querySelector('.vid-2');
+        
+        if (!vid1 || !vid2) return;
+        
+        // Calculate which page we're on
+        window.addEventListener('scroll', () => {
+            const scrollProgress = window.pageYOffset / window.innerHeight;
+            
+            // Page 1 (0-0.9): No videos, just text
+            if (scrollProgress < 0.9) {
+                vid1.classList.remove('mobile-visible');
+                vid2.classList.remove('mobile-visible');
+            }
+            // Page 2 (0.9-1.9): Show video 1
+            else if (scrollProgress >= 0.9 && scrollProgress < 1.9) {
+                vid1.classList.add('mobile-visible');
+                vid2.classList.remove('mobile-visible');
+            }
+            // Page 3 (1.9-3.0): Transition - fade out video 1, fade in video 2
+            else if (scrollProgress >= 1.9 && scrollProgress < 3.0) {
+                // Smooth transition
+                const transitionProgress = (scrollProgress - 1.9) / 0.3; // 0.3vh transition window
+                if (transitionProgress < 0.5) {
+                    vid1.classList.add('mobile-visible');
+                    vid2.classList.remove('mobile-visible');
+                } else {
+                    vid1.classList.remove('mobile-visible');
+                    vid2.classList.add('mobile-visible');
+                }
+            }
+            // After page 3: Hide both (past hero section)
+            else {
+                vid1.classList.remove('mobile-visible');
+                vid2.classList.remove('mobile-visible');
+            }
+        });
+    }
+}
+
+// Initialize on load
+handleMobileVideos();
+
+// Re-initialize on resize
+window.addEventListener('resize', () => {
+    handleVideoVisibility();
+    handleMobileVideos();
+});
+
+/* =====================================================
+   ORBITAL SECTIONS ANIMATION
+   ===================================================== */
+// Animate world-map during orbital sections
+const impactSection = document.querySelector('#impact');
+const gallerySection = document.querySelector('#gallery');
+
+if (impactSection) {
+    gsap.to(".world-map", {
+        x: "-80vw",
+        y: "-50vh",
+        rotation: -15,
+        scale: 1.15,
+        scrollTrigger: {
+            trigger: impactSection,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2,
+        }
+    });
+}
+
+if (gallerySection) {
+    gsap.to(".world-map", {
+        x: "60vw",
+        y: "-80vh",
+        rotation: 18,
+        scale: 0.9,
+        scrollTrigger: {
+            trigger: gallerySection,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2,
+        }
+    });
+}
 
 /* =====================================================
    PERFORMANCE OPTIMIZATION
