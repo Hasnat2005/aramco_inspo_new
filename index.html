@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- MENU OVERLAY - Aramco Style -->
+    <!-- MENU OVERLAY - Aramco Grid Style -->
     <div class="menu-overlay">
-        <div class="menu-container">
-            <div class="menu-header-top">
+        <div class="menu-grid">
+            <!-- Top Bar -->
+            <div class="menu-top-bar">
                 <div class="logo-menu">TECHNOSOFTS</div>
                 <div class="menu-close">
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <nav class="menu-content">
+            
+            <!-- Left Column - Navigation -->
+            <div class="menu-nav-column">
                 <ul class="menu-list">
                     <li><a href="#home" class="menu-link">Home</a></li>
                     <li><a href="#partnership" class="menu-link">About</a></li>
@@ -28,25 +31,43 @@
                     <li><a href="#gallery" class="menu-link">Gallery</a></li>
                     <li><a href="#contact" class="menu-link">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="menu-footer">
-                <div class="menu-contact-row">
-                    <div class="contact-block">
-                        <p class="contact-label">Location</p>
-                        <p class="contact-value">Sialkot, Pakistan</p>
-                    </div>
-                    <div class="contact-block">
-                        <p class="contact-label">Email</p>
-                        <p class="contact-value">info@technosofts.net</p>
-                    </div>
+            </div>
+            
+            <!-- Right Column - Info -->
+            <div class="menu-info-column">
+                <div class="info-item">
+                    <p class="info-label">ADDRESS</p>
+                    <p class="info-text">City Square, Khadim Ali Road<br>Near Model Town, Sialkot<br>Pakistan</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">EMAIL</p>
+                    <p class="info-text"><a href="mailto:info@technosofts.net">info@technosofts.net</a></p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">PHONE</p>
+                    <p class="info-text">+92-52-304-6791<br>+92-303-846-6791</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">HOURS</p>
+                    <p class="info-text">Monday - Saturday<br>09:00 AM - 08:00 PM</p>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="menu-bottom-bar">
+                <p>© 2025 TechnoSofts. All rights reserved.</p>
+                <div class="menu-social">
+                    <a href="#">Facebook</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- HEADER -->
-    <header class="fixed-top px-4 py-4 d-flex justify-content-between align-items-center">
-        <div class="logo fw-bold text-white fs-4">TECHNOSOFTS</div>
+    <header class="site-header">
+        <div class="header-logo">TECHNOSOFTS</div>
         <div class="menu-icon">
             <span></span>
             <span></span>
@@ -76,9 +97,9 @@
     <!-- HERO TEXT SECTIONS (3 PAGES) -->
     <main>
         <section class="scroll-section">
-            <div class="content-box">
+            <div class="content-box-main">
                 <h1 class="display-1 fw-bolder text-white">ENGINEERING<br><span class="outline-text">THE FUTURE</span></h1>
-                <p class="lead text-white-50">Sialkot's largest digital ecosystem.</p>
+                <p class="lead_main text-white-50">Sialkot's largest digital ecosystem of innovation and technology.</p>
             </div>
         </section>
         
@@ -97,51 +118,49 @@
         </section>
     </main>
 
-    <!-- NEW SECTIONS START HERE -->
-    
-    <!-- SECTION 1: PARTNERSHIP (White BG) -->
-    <section id="partnership" class="white-section section-partnership">
-        <div class="section-container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h2 class="section-title">A Strategic Partnership</h2>
-                    <p class="section-description">TechnoSofts has enjoyed a thriving relationship with businesses across Pakistan and globally for years. Now we're partnering to push the limits of possibility in technology and innovation.</p>
-                    
-                    <div class="feature-grid mt-5">
-                        <div class="feature-item">
-                            <div class="feature-icon">🚀</div>
-                            <div class="feature-text">
+    <!-- SECTION 1: PARTNERSHIP (Aramco-style 2-page layout) -->
+    <section id="partnership" class="aramco-section">
+        <div class="aramco-container">
+            <!-- Top Half - Text -->
+            <div class="aramco-text-block">
+                <h2 class="aramco-title">A Strategic Partnership</h2>
+                <p class="aramco-description">TechnoSofts has enjoyed a thriving relationship with businesses across Pakistan and globally for years. Now we're partnering to push the limits of possibility in technology and innovation.</p>
+            </div>
+            
+            <!-- Images spanning 1.5 pages -->
+            <div class="aramco-images">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=900&fit=crop" alt="Team Collaboration" class="aramco-img-left">
+                <div class="aramco-img-right-container">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=900&fit=crop" alt="Innovation" class="aramco-img-right">
+                    <div class="aramco-features">
+                        <div class="feature-point">
+                            <span class="feature-icon">🚀</span>
+                            <div>
                                 <h4>Injecting New Energy</h4>
                                 <p>Into Pakistan's tech community through innovative solutions</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🤝</div>
-                            <div class="feature-text">
+                        <div class="feature-point">
+                            <span class="feature-icon">🤝</span>
+                            <div>
                                 <h4>Strategic Partnerships</h4>
                                 <p>Long-standing presence in Sialkot with global reach</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-text">
+                        <div class="feature-point">
+                            <span class="feature-icon">⚡</span>
+                            <div>
                                 <h4>Innovation Leadership</h4>
                                 <p>Highlighting our commitment to community engagement</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="image-grid-double">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" alt="Team Collaboration" class="grid-img img-1">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop" alt="Innovation" class="grid-img img-2">
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: INNOVATION SHOWCASE (Dark BG) -->
+    <!-- SECTION 2: INNOVATION SHOWCASE -->
     <section id="innovation" class="dark-section section-innovation">
         <div class="section-container">
             <div class="text-center mb-5">
@@ -157,7 +176,6 @@
                 </div>
             </div>
 
-            <!-- Image Carousel -->
             <div class="image-carousel-container">
                 <div class="main-carousel-image">
                     <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1400&h=800&fit=crop" alt="Office Space" class="carousel-main-img" id="mainCarouselImg">
@@ -192,7 +210,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: STATS & IMPACT (ORBITAL BG - 3rd Last) -->
+    <!-- SECTION 3: STATS & IMPACT (ORBITAL BG) -->
     <section id="impact" class="orbital-section section-impact">
         <div class="section-container">
             <div class="row align-items-center g-5">
@@ -230,7 +248,7 @@
         </div>
     </section>
 
-    <!-- SECTION 4: GALLERY SHOWCASE (ORBITAL BG - 2nd Last) -->
+    <!-- SECTION 4: GALLERY SHOWCASE (ORBITAL BG) -->
     <section id="gallery" class="orbital-section section-gallery">
         <div class="section-container">
             <h2 class="section-title text-center mb-3 text-white">First in Sialkot, Then Beyond</h2>
@@ -257,7 +275,7 @@
         </div>
     </section>
 
-    <!-- SECTION 5: FINAL CTA (Dark BG) -->
+    <!-- SECTION 5: FINAL CTA -->
     <section id="contact" class="dark-section section-cta">
         <div class="section-container">
             <div class="row align-items-center g-5">
